@@ -25,6 +25,7 @@ The scripts are standalone and can run regardless of where the file is located o
   ```powershell
   # Encrypt "foobar.txt" to "foobar.txt.enc".
   Protect-AesFile -InFile foobar.txt -OutFile foobar.txt.enc -Password <password>
+
   # Decrypt "foobar.txt.enc" to "foobar.txt.dec"
   Unprotect-AesFile -InFile foobar.txt.enc -OutFile foobar.txt.dec -Password <password>
   ```
@@ -34,6 +35,7 @@ The scripts are standalone and can run regardless of where the file is located o
   ```powershell
   # Encrypt "foobar.txt" to "foobar.txt.enc".
   Protect-AesFile -InFile foobar.txt -OutFile foobar.txt.enc -Password <password> -AsBase64
+
   # Decrypt "foobar.txt.enc" to "foobar.txt.dec"
   Unprotect-AesFile -InFile foobar.txt.enc -OutFile foobar.txt.dec -Password <password> -AsBase64
   ```
@@ -43,6 +45,7 @@ The scripts are standalone and can run regardless of where the file is located o
   ```powershell
   # Encrypt "foobar.txt" to "foobar.txt.enc".
   Protect-AesFile -InFile foobar.txt -OutFile foobar.txt.enc -Password <password>
+
   # Decrypt "foobar.txt.enc" to "foobar.txt.dec" using OpenSSL.
   openssl enc -aes256 -d -pbkdf2 -k <password> -in foobar.txt.enc -out foobar.txt.dec
   ```
@@ -50,6 +53,7 @@ The scripts are standalone and can run regardless of where the file is located o
   ```powershell
   # Encrypt "foobar.txt" to "foobar.txt.enc" using OpenSSL.
   openssl enc -aes256 -pbkdf2 -k <password> -in foobar.txt -out foobar.txt.enc
+
   # Decrypt "foobar.txt.enc" to "foobar.txt.dec".
   Unprotect-AesFile -InFile foobar.txt.enc -OutFile foobar.txt.dec -Password <password>
   ```
@@ -68,4 +72,4 @@ The code within this repository comes with no guarantee. Use at your own risk.
 
 ## License
 
-Licensed under the MIT License.
+Licensed under the [MIT License](LICENSE.md).
